@@ -10,7 +10,7 @@
 ) = {
   let content = [
     #grid(
-      columns: (70%, 28%, 1fr),
+      columns: (65%, 33%, 1fr),
       heading(level: 2, organization),
       align(right)[
         #set text(rgb(130,130,130))
