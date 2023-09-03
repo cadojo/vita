@@ -16,7 +16,7 @@
   }
 }
 
-#let modern(
+#let resume(
   name: none,
   email: none,
   phone: none,
@@ -96,4 +96,28 @@
       )   
     ]
   )
+}
+
+#let cv(
+  name: none,
+  email: none,
+  phone: none,
+  links: none,
+  title: "Professional Resume",
+  theme: rgb(120,120,120),
+  body: stack(spacing: 1.25em, experiences(), degrees(), skills()),
+  metadata
+) = {
+    let subtitle = (email, phone, ..links).join(" • ")
+    let header = stack(
+      spacing: 1.5em,
+      text("Joey Carpinelli", size: 18pt),
+      if subtitle.len() > 4 { 
+         
+        subtitle } 
+    )
+    set page(
+      margin: 1in,
+      header: align(center, header),
+    )
 }

@@ -4,7 +4,7 @@
   organization,
   role: none,
   start: none,
-  stop: none,
+  stop: none, 
 
   notes
 ) = {
